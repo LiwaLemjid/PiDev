@@ -1,0 +1,32 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+{{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
+{{ form_widget(form.username,{'attr':{'class':'form-control','placeholder':"Saisir votre nom d'utilisateur"}}) }}
+    {{ form_errors(form.username) }}
+{{ form_widget(form.nom,{'attr':{'class':'form-control','placeholder':'Saisir votre nom'}}) }}
+    {{ form_errors(form.nom) }}
+{{ form_widget(form.prenom,{'attr':{'class':'form-control','placeholder':'Saisir votre prenom'}}) }}
+    {{ form_errors(form.prenom) }}
+{{ form_widget(form.sexe,{'attr':{'class':'form-control','placeholder':'Saisir votre sexe'}}) }}
+    {{ form_errors(form.sexe) }}
+{{ form_widget(form.email,{'attr':{'class':'form-control','placeholder':'Saisir votre email'}}) }}
+    {{ form_errors(form.email) }}
+
+{{ form_widget(form.plainPassword.first,{'attr':{'class':'form-control','placeholder':'Saisir votre mot de passe'}}) }}
+    {{ form_errors(form.plainPassword.first) }}
+{{ form_widget(form.plainPassword.second,{'attr':{'class':'form-control','placeholder':'Retaper votre mot de passe'}}) }}
+    {{ form_errors(form.plainPassword.second) }}
+{{ form_widget(form.date_naiss,{'attr':{'class':'form-control','placeholder':'Saisir votre email'}}) }}
+    {{ form_errors(form.date_naiss) }}
+{{ form_widget(form.email,{'attr':{'class':'form-control datepicker','placeholder':'Saisir votre date de naissance'}}) }}
+    {{ form_errors(form.email) }}
+{{ form_widget(form.adresse,{'attr':{'class':'form-control','placeholder':'Saisir votre adresse'}}) }}
+    {{ form_errors(form.adresse) }}
+{{ form_widget(form.tel,{'attr':{'class':'form-control','placeholder':'Saisir votre tel'}}) }}
+    {{ form_errors(form.tel) }}
+
+
+    <div>
+        <input type="submit" class="btn btn-primary" value="{{ 'registration.submit'|trans }}" />
+    </div>
+{{ form_end(form) }}

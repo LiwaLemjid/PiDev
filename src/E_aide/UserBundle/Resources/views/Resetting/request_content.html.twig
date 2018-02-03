@@ -1,0 +1,17 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+<div class="ragister-account text-center tr-section tr-section-padding">
+    <div class="account-content">
+        <div class="logo text-center">
+            <a class="navbar-brand" href="{{ path('user_homepage') }}"><img class="img-responsive" src="{{ asset('bundles/user/images/logo.png') }}" alt="Logo"></a>
+        </div>
+<form action="{{ path('fos_user_resetting_send_email') }}" method="POST" class="fos_user_resetting_request">
+    <br>
+    <div class="col-md-12">
+        <h4>{{ 'resetting.request.username'|trans }}</h4>
+        <input type="text" id="username" name="username" placeholder="{{ 'resetting.request.username'|trans }}" class="form-control" required="required" />
+
+        <input type="submit" class="btn btn-primary" value="{{ 'resetting.request.submit'|trans }}" />
+    </div>
+</form>
+    </div></div>

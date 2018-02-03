@@ -1,0 +1,15 @@
+{% extends "UserBundle::base2.html.twig" %}
+
+{% block fos_user_content %}
+<div class="ragister-account text-center tr-section tr-section-padding">
+    <div class="account-content">
+        <div class="logo text-center">
+            <a class="navbar-brand" href="{{ path('user_homepage') }}"><img class="img-responsive" src="{{ asset('bundles/user/images/logo.png') }}" alt="Logo"></a>
+        </div>
+        <div class="section-title">
+            <h1>Create a new account</h1>
+        </div>
+        {% include "@User/Registration/register_content.html.twig" %}
+    </div>
+</div>
+{% endblock fos_user_content %}
